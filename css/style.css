@@ -1,0 +1,1037 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* container  */
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Small  */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* container end  */
+
+/* Variables Start */
+
+:root {
+  --main-color: #f50138;
+  --alt-color: #5900d2;
+}
+
+/* Variables End */
+
+/* Header Start  */
+
+header {
+  width: 100%;
+  position: relative;
+  background-image: url(../images/vishnu-r-nair-m1WZS5ye404-unsplash.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo h1 a {
+  color: white;
+  font-weight: 600;
+}
+
+header .container nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  header .container nav ul li {
+    display: none;
+  }
+}
+
+header .container nav ul li {
+  /* padding-left: 20px; */
+  font-size: 15px;
+  position: relative;
+}
+
+header .container nav ul li::before {
+  content: "";
+  background-color: var(--main-color);
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  transform: scale(0);
+  transition: 0.3s;
+}
+
+header .container nav ul li:hover::before {
+  transform: scale(1);
+}
+
+header .container nav ul a {
+  padding: 25px 15px;
+  color: white;
+}
+
+header .container nav ul i {
+  padding-left: 15px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+header .container .main {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #00000026;
+}
+
+header .container .main h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+header .container .main h1 span {
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+
+@media (max-width: 605px) {
+  header .container .main h1 span {
+    font-size: 50px;
+  }
+
+  header .container .main h1 {
+    font-size: 35px;
+  }
+}
+
+header .container .main p {
+  font-size: 20px;
+}
+
+header .container .main a {
+  display: block;
+  color: white;
+  background-color: var(--main-color);
+  width: fit-content;
+  margin: 50px auto;
+  padding: 15px 40px;
+  border-radius: 50px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+header .container .main a::before {
+  content: "";
+  background-color: #5900d2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 50px;
+  transform: scale(0);
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0%;
+}
+
+header .container .main a:hover::before {
+  transform: scale(1);
+  opacity: 100%;
+}
+
+/* Header End  */
+
+/* SEC1 STARTS  */
+
+.sec1 {
+  padding: 100px 0;
+}
+
+.sec1 .container {
+  display: grid;
+  justify-content: space-between;
+  text-transform: uppercase;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .sec1 .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.sec1 .box {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .sec1 .box {
+    justify-content: center;
+  }
+}
+
+.sec1 .box i {
+  font-size: 34px;
+  color: var(--main-color);
+  padding-right: 15px;
+}
+
+.sec1 .info p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.sec1 .info h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sec2 {
+  background-image: url(../images/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg);
+  background-size: cover;
+  /* height: 50vh; */
+  position: relative;
+}
+
+.sec2::before {
+  content: "";
+  background-color: #00000093;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.sec2 .container {
+  position: relative;
+}
+
+.sec2 .container > h1 {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-top: 70px;
+}
+
+.sec2 .container .counters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .sec2 .container .counters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* gap: 20px; */
+  }
+}
+
+.sec2 .container .box {
+  margin: auto 20px;
+  background-color: var(--main-color);
+  padding: 30px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec2 .container .box > h1 {
+  margin: 0;
+  font-size: 45px;
+}
+
+.sec2 .container .box p {
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+/* SEC2 END  */
+
+/* SEC3 STARTS */
+
+.sec3 .container > h1 {
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .sec3 .container > h1 {
+    text-align: center;
+  }
+}
+
+.sec3 .container > h1::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  top: -10px;
+  width: 10%;
+  height: 2px;
+}
+
+.sec3 .container > p {
+  color: #777;
+  text-align: center;
+  padding: 0 150px;
+}
+
+@media (max-width: 767px) {
+  .sec3 .container > p {
+    padding: 0;
+  }
+}
+
+.sec3 .container .services {
+  display: grid;
+  gap: 30px;
+  margin: 50px 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.sec3 .container .services .box {
+  background-color: #f0f2f6;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.6s;
+}
+
+.sec3 .container .services .box:hover {
+  background-color: var(--main-color);
+  box-shadow: 0 0 20px 15px rgb(0 0 0 / 7%);
+}
+
+.sec3 .container .services .box:hover p,
+.sec3 .container .services .box:hover a,
+.sec3 .container .services .box:hover i,
+.sec3 .container .services .box:hover h1 {
+  color: white;
+}
+
+.sec3 .container .services .box i {
+  font-weight: 900;
+  font-size: 60px;
+  font-family: "Font Awesome 5 Free";
+  color: var(--main-color);
+  position: relative;
+  top: 0;
+}
+
+.sec3 .container .services .box h1 {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.sec3 .container .services .box p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.sec3 .container .services .box a {
+  color: var(--main-color);
+  padding-top: 20px;
+  font-weight: 700;
+}
+
+/* SEC3 ENDS */
+
+/* SEC4 STARTS  */
+
+.sec4 > h1 {
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .sec4 > h1 {
+    text-align: center;
+  }
+}
+
+.sec4 > h1::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  top: -10px;
+  width: 10%;
+  height: 2px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery .box {
+  flex-basis: 25%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-bottom: -5px;
+}
+
+@media (max-width: 767px) {
+  .gallery .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery .box {
+    flex-basis: 100%;
+  }
+}
+
+.gallery .box:hover img {
+  transform: scale(1.2);
+}
+
+.gallery .box img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.gallery .box .info {
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  padding: 5px 15px;
+  background: black;
+}
+
+.gallery .box h1 {
+  font-weight: 700;
+  color: var(--main-color);
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.gallery .box p {
+  font-size: 10px;
+}
+
+/* SEC4 END */
+
+/* SEC5 STARTS  */
+
+.sec5 .container > h1 {
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .sec5 .container > h1 {
+    text-align: center;
+  }
+}
+
+.sec5 .container > h1::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  top: -10px;
+  width: 10%;
+  height: 2px;
+}
+
+.sec5 .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.sec5 .plans .box {
+  background-color: #f0f2f6;
+  padding: 80px 30px;
+  transition: 0.6s;
+}
+
+.sec5 .plans .box:hover {
+  background-color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.193);
+}
+
+.sec5 .plans .active {
+  background-color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.193);
+  position: relative;
+}
+
+.sec5 .plans .active .reco {
+  font-size: 14px;
+  position: absolute;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  top: 0;
+  font-weight: 700;
+  left: 0;
+}
+
+.sec5 .plans .box h1 {
+  font-weight: 600;
+  margin: 10px;
+}
+
+.sec5 .plans .box p {
+  font-size: 17px;
+  color: #777;
+}
+
+.sec5 .plans .box h2 {
+  font-size: 50px;
+  font-weight: 700;
+  position: relative;
+  margin: 10px 0;
+}
+
+.sec5 .plans .box h2::after {
+  content: "$";
+  position: absolute;
+  top: 5px;
+  font-weight: normal;
+  font-size: 28px;
+  margin-left: 10px;
+  color: #777;
+}
+
+.sec5 .plans .box ul li {
+  padding: 15px;
+  color: #777;
+}
+
+.sec5 .plans .box a {
+  color: white;
+  margin: 15px;
+  text-transform: uppercase;
+  display: block;
+  padding: 20px 50px;
+  background-color: var(--main-color);
+  border-radius: 50px;
+  width: fit-content;
+  margin: 15px auto;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.sec5 .plans .box a::before {
+  content: "";
+  background-color: #5900d2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 50px;
+  transform: scale(0);
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0%;
+}
+
+.sec5 .plans .box a:hover::before {
+  transform: scale(1);
+  opacity: 100%;
+}
+
+/* SEC5 END */
+
+/* SEC6 STARTS */
+
+.sec6 .container > h1 {
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .sec6 .container > h1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sec6 .container > h1::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  top: -20px;
+  width: 10%;
+  height: 2px;
+}
+
+.sec6 .container i {
+  font-family: "Font Awesome 5 Free";
+  margin-right: 20px;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .sec6 .container i {
+    margin: 20px;
+  }
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  background-color: #f0f2f6;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: block;
+}
+
+table tbody {
+  display: table;
+  width: 100%;
+}
+
+table tr td {
+  padding: 30px 30px;
+}
+
+table img {
+  width: 100px;
+  margin-right: 60px;
+}
+
+table .time h1 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 30px;
+}
+
+table .time p {
+  font-size: 14px;
+}
+
+table .info h1 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 16px;
+}
+
+table .info h2 {
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+table .info p {
+  color: #777;
+}
+
+table .read {
+  color: white;
+  margin: 15px;
+  text-transform: uppercase;
+  display: block;
+  padding: 15px 35px;
+  background-color: var(--main-color);
+  border-radius: 50px;
+  width: fit-content;
+  margin: 15px auto;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+}
+
+table .read::before {
+  content: "";
+  background-color: #5900d2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 50px;
+  transform: scale(0);
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0%;
+}
+
+table .read:hover::before {
+  transform: scale(1);
+  opacity: 100%;
+}
+
+table .buy {
+  color: var(--main-color);
+  text-decoration: underline;
+  font-size: 14px;
+  margin: 0 30px;
+  font-weight: 600;
+}
+
+/* SEC6 ENDS */
+
+/* SEC7 STARTS */
+
+.sec7 {
+  padding-bottom: 100px;
+}
+
+.sec7 .container > h1 {
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .sec7 .container > h1 {
+    text-align: center;
+  }
+}
+
+.sec7 .container > h1::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  top: -10px;
+  width: 10%;
+  height: 2px;
+}
+
+.sec7 .container .logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+}
+
+.sec7 .container .logos img {
+  height: 150px;
+  filter: grayscale(1);
+  opacity: 35%;
+  display: block;
+  padding-bottom: 20px;
+}
+
+/* SEC7 ENDS  */
+
+/* SEC8 STARTS  */
+
+.sec8 {
+  background-image: url(../images/vishnu-r-nair-m1WZS5ye404-unsplash.jpg);
+  background-size: cover;
+  position: relative;
+  /* height: 50vh; */
+}
+
+.sec8::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.341);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.sec8 .container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-top: 120px;
+  color: white;
+  position: relative;
+  justify-content: center;
+}
+
+.sec8 .container .info {
+  width: 100%;
+}
+
+.sec8 .container .info p {
+  padding-bottom: 100px;
+}
+
+.sec8 .container .info h1 {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+
+.sec8 .container .btn a {
+  color: white;
+  margin: 15px;
+  text-transform: uppercase;
+  display: block;
+  padding: 20px 50px;
+  background-color: var(--main-color);
+  border-radius: 50px;
+  width: fit-content;
+  margin: 15px auto;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.sec8 .container .btn a::before {
+  content: "";
+  background-color: #5900d2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 50px;
+  transform: scale(0);
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0%;
+}
+
+.sec8 .container .btn a:hover::before {
+  transform: scale(1);
+  opacity: 100%;
+}
+
+/* SEC8 END */
+
+/* SEC9 STARTS  */
+
+.sec9 {
+  background-color: #0b031b;
+}
+
+.sec9 .container {
+  display: grid;
+  justify-content: center;
+  padding-top: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .sec9 .container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .sec9 .box {
+    padding-bottom: 50px;
+  }
+}
+
+.sec9 .container .insta h1 {
+  padding-bottom: 20px;
+}
+
+.sec9 .container .box {
+  padding: 20px 20px;
+}
+
+.sec9 .container h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+}
+
+.sec9 .container h1::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  top: -15px;
+  width: 10%;
+  height: 2px;
+}
+
+@media (max-width: 767px) {
+  .sec9 .container h1::before {
+    right: 45%;
+  }
+}
+
+.sec9 .container p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.sec9 .container .social {
+  color: var(--main-color);
+  font-size: 30px;
+}
+
+.sec9 .container .social i {
+  margin-right: 22px;
+}
+
+.sec9 .container .insta .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.sec9 .container .insta .gallery img {
+  width: 87px;
+}
+
+.sec9 .subs input[type="email"] {
+  overflow: visible;
+  width: 100%;
+  height: 45px;
+  border: none;
+  padding: 20px;
+  font-style: italic;
+  background-color: #1f1039;
+  color: white;
+  margin: 30px 0;
+}
+
+.sec9 .subs input[type="email"]:focus {
+  outline: none;
+}
+
+.sec9 .subs input[type="submit"] {
+  width: 100%;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  position: relative;
+}
+
+.sec9 .subs input[type="submit"]::before {
+  content: "";
+  background-color: #5900d2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 50px;
+  transform: scale(0);
+  transition: 0.3s;
+  z-index: -1;
+  opacity: 0%;
+}
+
+.sec9 .subs input[type="submit"]:hover::before {
+  transform: scale(1);
+  opacity: 100%;
+}
+
+/* SEC9 ENDs  */
