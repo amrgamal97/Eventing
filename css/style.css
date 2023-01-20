@@ -912,12 +912,12 @@ table .buy {
   background-color: #0b031b;
 }
 
-.sec9 .container {
+/* .sec9 .container {
   display: grid;
   justify-content: center;
   padding-top: 90px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
+} */
 
 @media (max-width: 767px) {
   .sec9 .container {
